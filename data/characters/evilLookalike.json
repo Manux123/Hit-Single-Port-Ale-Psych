@@ -1,0 +1,156 @@
+{
+	"images": [
+		"yourself/Lookalike_Assets"
+	],
+	"type": "sheet",
+	"animations": [
+		{
+			"name": "idle",
+			"prefix": "ElIdleBIG",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": 0,
+				"y": 0
+			}
+		},
+		{
+			"name": "idle-alt",
+			"prefix": "ElIdleSMALL",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": -60,
+				"y": -480
+			}
+		},
+		{
+			"name": "singLEFT",
+			"prefix": "ElLeftBIG",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": 111,
+				"y": 30
+			}
+		},
+		{
+			"name": "singLEFT-alt",
+			"prefix": "ElLeftSMALL",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": -2,
+				"y": -457
+			}
+		},
+		{
+			"name": "singDOWN",
+			"prefix": "ElDownBIG",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [
+				0,
+				1,
+				2,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"offset": {
+				"x": 20,
+				"y": -129
+			}
+		},
+		{
+			"name": "singDOWN-alt",
+			"prefix": "ElDownSMALL",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": -50,
+				"y": -526
+			}
+		},
+		{
+			"name": "singUP",
+			"prefix": "ElUpBIG",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": 166,
+				"y": 275
+			}
+		},
+		{
+			"name": "singUP-alt",
+			"prefix": "ElUpSMALL",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": -80,
+				"y": -429
+			}
+		},
+		{
+			"name": "singRIGHT",
+			"prefix": "ElRightBIG",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": -10,
+				"y": 27
+			}
+		},
+		{
+			"name": "singRIGHT-alt",
+			"prefix": "ElRightSMALL",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": -66,
+				"y": -476
+			}
+		}
+	],
+	"animationLength": 2.2,
+	"icon": "dad",
+	"cameraOffset": {
+		"x": 100,
+		"y": -125
+	},
+	"death": "",
+	"sustainAnimation": true,
+	"barColor": "#AF66CE",
+	"properties": {
+		"x": 70,
+		"y": -180,
+		"scale": {
+			"x": 1,
+			"y": 1
+		},
+		"flipX": false,
+		"antialiasing": true
+	},
+	"bopAnimations": [
+		"idle"
+	],
+	"format": "ale-character-v0.1"
+}

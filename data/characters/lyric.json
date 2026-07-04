@@ -1,0 +1,42 @@
+{
+    "images": [
+        "yourself/lyric"
+    ],
+    "type": "map",
+    "animations": [
+        {
+            "name": "story_of_yourtalebilly",
+            "prefix": "story_of_yourtalebilly",
+            "frameRate": 24,
+            "loop": false,
+            "indices": [],
+            "offset": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    ],
+    "animationLength": 2.2,
+    "icon": "dad",
+    "cameraOffset": {
+        "x": 0,
+        "y": 0
+    },
+    "death": "",
+    "sustainAnimation": true,
+    "barColor": "#AF66CE",
+    "properties": {
+        "x": -70,
+        "y": -480,
+        "scale": {
+            "x": 1,
+            "y": 1
+        },
+        "flipX": false,
+        "antialiasing": true
+    },
+    "bopAnimations": [
+        null
+    ],
+    "format": "ale-character-v0.1"
+}

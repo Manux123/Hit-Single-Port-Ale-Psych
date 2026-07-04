@@ -1,0 +1,35 @@
+{
+	"songs": [
+		{
+			"icon": "evilLookalike",
+			"name": "Silly Billy",
+			"color": "#9271FD"
+		},
+		{
+			"icon": "nmireal",
+			"name": "fakebaby",
+			"color": "#9271FD"
+		},
+		{
+			"icon": "x",
+			"name": "Trichael",
+			"color": "#9271FD"
+		},
+		{
+			"icon": "x_3d",
+			"name": "Joyous",
+			"color": "#9271FD"
+		}
+	],
+	"background": "stage",
+	"image": "week1",
+	"phrase": "Hit Single",
+	"locked": false,
+	"hideFreeplay": false,
+	"hideStoryMode": false,
+	"previousWeek": "",
+	"difficulties": [
+		"Normal"
+	],
+	"format": "ale-week-v0.1"
+}

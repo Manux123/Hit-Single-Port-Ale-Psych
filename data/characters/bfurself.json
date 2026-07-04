@@ -1,0 +1,131 @@
+{
+	"images": [
+		"yourself/Yourself_BF_Assets"
+	],
+	"type": "sheet",
+	"animations": [
+		{
+			"name": "idle",
+			"prefix": "BFIdle",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": 0,
+				"y": 0
+			}
+		},
+		{
+			"name": "singLEFT",
+			"prefix": "BFLeft0",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": 83,
+				"y": -1
+			}
+		},
+		{
+			"name": "singLEFTalt",
+			"prefix": "BFLeftALT0",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": 7,
+				"y": 2
+			}
+		},
+		{
+			"name": "singDOWN",
+			"prefix": "BFDown0",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": -26,
+				"y": -59
+			}
+		},
+		{
+			"name": "singDOWNalt",
+			"prefix": "BFDownALT",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": -23,
+				"y": -60
+			}
+		},
+		{
+			"name": "singUP",
+			"prefix": "BFUp0",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": -56,
+				"y": 65
+			}
+		},
+		{
+			"name": "singUPalt",
+			"prefix": "BFUpALT",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": 37,
+				"y": 70
+			}
+		},
+		{
+			"name": "singRIGHT",
+			"prefix": "BFRight0",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": -63,
+				"y": 1
+			}
+		},
+		{
+			"name": "singRIGHTalt",
+			"prefix": "BFRightALT",
+			"frameRate": 24,
+			"loop": false,
+			"indices": [],
+			"offset": {
+				"x": -30,
+				"y": 6
+			}
+		}
+	],
+	"animationLength": 0.4,
+	"icon": "bficon",
+	"cameraOffset": {
+		"x": 375,
+		"y": -90
+	},
+	"death": "bf-dead",
+	"sustainAnimation": true,
+	"barColor": "#30B0D1",
+	"properties": {
+		"x": -20,
+		"y": 190,
+		"scale": {
+			"x": 0.95,
+			"y": 0.95
+		},
+		"flipX": true,
+		"antialiasing": true
+	},
+	"bopAnimations": [
+		"idle",
+		null
+	],
+	"format": "ale-character-v0.1"
+}

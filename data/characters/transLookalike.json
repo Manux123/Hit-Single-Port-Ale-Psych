@@ -1,0 +1,42 @@
+{
+    "images": [
+        "yourself/Lookalike_Alt"
+    ],
+    "type": "sheet",
+    "animations": [
+        {
+            "name": "Smallize",
+            "prefix": "ElUngrow",
+            "frameRate": 24,
+            "loop": false,
+            "indices": [],
+            "offset": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    ],
+    "animationLength": 2.2,
+    "icon": "dad",
+    "cameraOffset": {
+        "x": 0,
+        "y": 180
+    },
+    "death": "",
+    "sustainAnimation": true,
+    "barColor": "#AF66CE",
+    "properties": {
+        "x": 0,
+        "y": -180,
+        "scale": {
+            "x": 1,
+            "y": 1
+        },
+        "flipX": false,
+        "antialiasing": true
+    },
+    "bopAnimations": [
+        null
+    ],
+    "format": "ale-character-v0.1"
+}

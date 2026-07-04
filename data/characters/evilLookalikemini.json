@@ -1,0 +1,86 @@
+{
+    "images": [
+        "yourself/Lookalike_Assets"
+    ],
+    "type": "sheet",
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "ElIdleSMALL",
+            "frameRate": 24,
+            "loop": false,
+            "indices": [],
+            "offset": {
+                "x": -60,
+                "y": -480
+            }
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "ElLeftSMALL",
+            "frameRate": 24,
+            "loop": false,
+            "indices": [],
+            "offset": {
+                "x": -2,
+                "y": -457
+            }
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "ElDownSMALL",
+            "frameRate": 24,
+            "loop": false,
+            "indices": [],
+            "offset": {
+                "x": -50,
+                "y": -526
+            }
+        },
+        {
+            "name": "singUP",
+            "prefix": "ElUpSMALL",
+            "frameRate": 24,
+            "loop": false,
+            "indices": [],
+            "offset": {
+                "x": -80,
+                "y": -429
+            }
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "ElRightSMALL",
+            "frameRate": 24,
+            "loop": false,
+            "indices": [],
+            "offset": {
+                "x": -66,
+                "y": -476
+            }
+        }
+    ],
+    "animationLength": 2.2,
+    "icon": "dad",
+    "cameraOffset": {
+        "x": 100,
+        "y": 225
+    },
+    "death": "",
+    "sustainAnimation": true,
+    "barColor": "#AF66CE",
+    "properties": {
+        "x": 70,
+        "y": -180,
+        "scale": {
+            "x": 1,
+            "y": 1
+        },
+        "flipX": false,
+        "antialiasing": true
+    },
+    "bopAnimations": [
+        "idle"
+    ],
+    "format": "ale-character-v0.1"
+}

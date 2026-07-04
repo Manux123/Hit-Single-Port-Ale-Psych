@@ -1,0 +1,42 @@
+{
+    "images": [
+        "yourself/unshrink"
+    ],
+    "type": "sheet",
+    "animations": [
+        {
+            "name": "Bigize",
+            "prefix": "ElUnshrink",
+            "frameRate": 24,
+            "loop": false,
+            "indices": [],
+            "offset": {
+                "x": 150,
+                "y": 160
+            }
+        }
+    ],
+    "animationLength": 2.2,
+    "icon": "dad",
+    "cameraOffset": {
+        "x": -160,
+        "y": -50
+    },
+    "death": "",
+    "sustainAnimation": true,
+    "barColor": "#AF66CE",
+    "properties": {
+        "x": 105,
+        "y": -165,
+        "scale": {
+            "x": 1,
+            "y": 1
+        },
+        "flipX": false,
+        "antialiasing": true
+    },
+    "bopAnimations": [
+        null
+    ],
+    "format": "ale-character-v0.1"
+}

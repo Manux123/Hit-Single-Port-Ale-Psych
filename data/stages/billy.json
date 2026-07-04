@@ -1,0 +1,71 @@
+{
+	"zoom": 0.67,
+	"speed": 1.4,
+	"hud": null,
+	"charactersOffset": {
+		"type": {
+			"opponent": {
+				"x": 840,
+				"y": 840
+			},
+			"player": {
+				"x": 1630,
+				"y": 900
+			}
+		}
+	},
+	"charactersCamera": {
+		"type": {
+			"opponent": {
+				"x": 0,
+				"y": 0
+			},
+			"player": {
+				"x": 0,
+				"y": 0
+			}
+		}
+	},
+	"format": "ale-stage-v0.1",
+	"spritesConfig": {
+		"directory": "yourself",
+		"properties": {
+			"scrollFactor": {
+				"x": 1
+			}
+		},
+		"sprites": [
+            {
+				"id": "brokenMirror",
+				"type": "image",
+				"images": [
+					"broken_mirror"
+				],
+				"properties": {
+					"x": 0,
+					"y": 0,
+                    "visible": false,
+					"scrollFactor": {
+						"x": 1,
+						"y": 1
+					}
+				}
+			},
+			{
+				"id": "mirror",
+				"type": "image",
+				"images": [
+					"silly_mirror"
+				],
+				"properties": {
+					"x": 0,
+					"y": 0,
+					"scrollFactor": {
+						"x": 1,
+						"y": 1
+					}
+				}
+			}
+		]
+	}
+}

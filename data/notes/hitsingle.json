@@ -1,0 +1,110 @@
+{
+    "images": [
+        "QUANTNOTE_assets"
+    ],
+    "type": "sheet",
+    "animations": [
+        {
+            "name": "strum left idle",
+            "prefix": "arrowLEFT"
+        },
+        {
+            "name": "strum left hit",
+            "prefix": "left confirm"
+        },
+        {
+            "name": "strum left press",
+            "prefix": "left press"
+        },
+        {
+            "name": "strum down idle",
+            "prefix": "arrowDOWN"
+        },
+        {
+            "name": "strum down hit",
+            "prefix": "down confirm"
+        },
+        {
+            "name": "strum down press",
+            "prefix": "down press"
+        },
+        {
+            "name": "strum up idle",
+            "prefix": "arrowUP"
+        },
+        {
+            "name": "strum up hit",
+            "prefix": "up confirm"
+        },
+        {
+            "name": "strum up press",
+            "prefix": "up press"
+        },
+        {
+            "name": "strum right idle",
+            "prefix": "arrowRIGHT"
+        },
+        {
+            "name": "strum right hit",
+            "prefix": "right confirm"
+        },
+        {
+            "name": "strum right press",
+            "prefix": "right press"
+        },
+        {
+            "name": "note left idle",
+            "prefix": "purple0"
+        },
+        {
+            "name": "note left sustain",
+            "prefix": "purple hold piece"
+        },
+        {
+            "name": "note left end",
+            "prefix": "pruple end hold"
+        },
+        {
+            "name": "note down idle",
+            "prefix": "blue0"
+        },
+        {
+            "name": "note down sustain",
+            "prefix": "blue hold piece"
+        },
+        {
+            "name": "note down end",
+            "prefix": "blue hold end"
+        },
+        {
+            "name": "note up idle",
+            "prefix": "green0"
+        },
+        {
+            "name": "note up sustain",
+            "prefix": "green hold piece"
+        },
+        {
+            "name": "note up end",
+            "prefix": "green hold end"
+        },
+        {
+            "name": "note right idle",
+            "prefix": "red0"
+        },
+        {
+            "name": "note right sustain",
+            "prefix": "red hold piece"
+        },
+        {
+            "name": "note right end",
+            "prefix": "red hold end"
+        }
+    ],
+    "properties": {
+        "scale": {
+            "x": 0.7,
+            "y": 0.7
+        }
+    }
+}

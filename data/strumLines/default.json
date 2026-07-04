@@ -1,0 +1,77 @@
+{
+	"splashes": "hitsingle",
+	"notes": "hitsingle",
+	"strums": "hitsingle",
+	"config": [
+		{
+			"note": "note left idle",
+			"hit": "strum left hit",
+			"end": "note left end",
+			"press": "strum left press",
+			"sustain": "note left sustain",
+			"miss": "singLEFTmiss",
+			"keyBind": {
+				"id": "left",
+				"group": "notes"
+			},
+			"idle": "strum left idle",
+			"sing": "singLEFT",
+			"splash": [
+				"splash1"
+			]
+		},
+		{
+			"note": "note down idle",
+			"hit": "strum down hit",
+			"end": "note down end",
+			"press": "strum down press",
+			"sustain": "note down sustain",
+			"miss": "singDOWNmiss",
+			"keyBind": {
+				"id": "down",
+				"group": "notes"
+			},
+			"idle": "strum down idle",
+			"sing": "singDOWN",
+			"splash": [
+				"splash1"
+			]
+		},
+		{
+			"note": "note up idle",
+			"hit": "strum up hit",
+			"end": "note up end",
+			"press": "strum up press",
+			"sustain": "note up sustain",
+			"miss": "singUPmiss",
+			"keyBind": {
+				"id": "up",
+				"group": "notes"
+			},
+			"idle": "strum up idle",
+			"sing": "singUP",
+			"splash": [
+				"splash1"
+			]
+		},
+		{
+			"note": "note right idle",
+			"hit": "strum right hit",
+			"end": "note right end",
+			"press": "strum right press",
+			"sustain": "note right sustain",
+			"miss": "singRIGHTmiss",
+			"keyBind": {
+				"id": "right",
+				"group": "notes"
+			},
+			"idle": "strum right idle",
+			"sing": "singRIGHT",
+			"splash": [
+				"splash1"
+			]
+		}
+	],
+	"spacing": 112,
+	"format": "ale-strumline-v0.1"
+}
