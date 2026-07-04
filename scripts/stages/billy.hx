@@ -49,8 +49,9 @@ function onSafeStepHit(step:Int) {
 		case 3425:
 			FlxTween.num(255, 0, 1.75, {ease: FlxEase.quadOut, onUpdate: function(twn) {
 				mirror.setColorTransform(1, 1, 1, 1, twn.value, twn.value, twn.value, 0);
+                mirror.alpha = 0;
 			}});
-            FlxTween.tween(mirror,{alpha: 0},1);
+            brokenMirror.visible = true;
 			camGame.shake(0.01, 0.25);
 			FlxG.sound.play(Paths.sound("gameplay/mirror_break"));
 	}

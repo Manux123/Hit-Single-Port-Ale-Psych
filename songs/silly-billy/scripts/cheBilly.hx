@@ -131,6 +131,7 @@ function onSafeStepHit(step:Int) {
 			myWAYYY();
 		case 4175:
 			camGame.alpha = 0;
+			FlxTween.tween(strumLines.members[2], {alpha: 0}, 3);
 	}
 }
 
