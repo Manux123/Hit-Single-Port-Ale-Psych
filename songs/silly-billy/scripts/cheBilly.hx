@@ -79,7 +79,7 @@ function onNoteHit(note:Note, character:Character, rating:Dynamic, timeDistance:
 	if (character != dad)
 		return;
 
-	health -= 0.01;
+	health -= 0.02;
 }
 
 function myWAYYY() {
