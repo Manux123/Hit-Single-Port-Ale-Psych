@@ -89,7 +89,7 @@ function onNoteHit(note:Note, character:Character, rating:Dynamic, timeDistance:
 
 function myWAYYY() {
 	videoMyWay = new VideoSprite(0, 0, Paths.video("SO_STAY_FINAL"));
-	videoMyWay.cameras = [camHUD];
+	videoMyWay.cameras = [camOther];
 	videoMyWay.screenCenter();
 	videoMyWay.x -= 640;
 	videoMyWay.y -= 360;
@@ -97,9 +97,6 @@ function myWAYYY() {
 	add(videoMyWay);
 
 	videoMyWay.finishCallback = function() {
-		camGame.setShaders([blue]);
-		camHUD.setShaders([blue]);
-		camHUD2.setShaders([blue]);
 		black.alpha = 0;
 		camGame.flash(0xFF000000, 2);
 		camGame.zoom = 1.1;
@@ -135,6 +132,10 @@ function onSafeStepHit(step:Int) {
 			FlxTween.tween(camGame, {zoom: camGame.zoom + 0.6}, 1);
 		case 3494:
 			myWAYYY();
+		case 3889:
+			camGame.setShaders([blue]);
+			camHUD.setShaders([blue]);
+			camHUD2.setShaders([blue]);
 		case 4175:
 			camGame.alpha = 0;
 			FlxTween.tween(strumLines.members[2], {alpha: 0}, 3);
