@@ -46,7 +46,7 @@ function onCreate() {
 		option.ID = i;
 		option.scale.set(1.5, 1.5);
 		option.updateHitbox();
-		option.x = (FlxG.width - option.width) / 2 + 40;
+		option.x = (FlxG.width - option.width) / 2;
 		option.scrollFactor.set(0, 0);
 		option.visible = false;
 
