@@ -6,32 +6,17 @@ var videoMyWay:VideoSprite = null;
 var blue = null;
 
 function onCreate() {
-	skipCountdown = true;
-
 	blue = new funkin.visuals.shaders.FXShader('blue');
 	blue.set({hue: 1.3, pix: 0.00001});
 }
 
 function postCreate() {
-	videoIntro = new VideoSprite(0, 0, Paths.video("open"));
-	videoIntro.cameras = [camHUD2];
-	add(videoIntro);
+	black = new FlxSprite().makeGraphic(FlxG.width, FlxG.height + 10, FlxColor.BLACK);
+	black.cameras = [camHUD];
+	black.scrollFactor.set(0, 0);
+	add(black);
 
-	camGame.alpha = 0;
-	camHUD.alpha = 0;
-
-	videoIntro.finishCallback = function() {
-		camGame.alpha = 1;
-		camGame.zoom = 1.125;
-		camHUD.zoom = 1.25;
-		FlxTween.tween(camHUD2, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
-		camGame.flash(0xFF000000, 0.25);
-
-		if (videoIntro != null) {
-			videoIntro.destroy();
-			videoIntro = null;
-		}
-	};
+	camHUD2.visible = false;
 
 	dadStrumLine.x += 700;
 	dadStrumLine.y += 420;
@@ -47,13 +32,31 @@ function postCreate() {
 
 	dadStrumLine.camera = camGame;
 
-	comboGroup.visible = false;
+	comboGroup.visible = false;	
+}
 
-	black = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-	black.cameras = [camHUD];
-	black.scrollFactor.set(0, 0);
-	black.alpha = 0;
-	add(black);
+function onSongStart() {
+	videoIntro = new VideoSprite(0, 0, Paths.video("open"));
+	videoIntro.cameras = [camOther];
+	add(videoIntro);
+
+	camGame.alpha = 0;
+	camHUD.alpha = 0;
+
+	videoIntro.finishCallback = function() {
+		camGame.alpha = 1;
+		camGame.zoom = 1.125;
+		camHUD.zoom = 1.25;
+		camHUD2.visible = true;
+		FlxTween.tween(camHUD2, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+		camGame.flash(0xFF000000, 0.25);
+		black.alpha = 0;
+
+		if (videoIntro != null) {
+			videoIntro.destroy();
+			videoIntro = null;
+		}
+	};
 }
 
 function onMusicPause() {
