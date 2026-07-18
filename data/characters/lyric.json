@@ -5,7 +5,7 @@
     "type": "map",
     "animations": [
         {
-            "name": "story_of_yourtalebilly",
+            "timeline": "story_of_yourtalebilly",
             "prefix": "story_of_yourtalebilly",
             "frameRate": 24,
             "loop": false,
