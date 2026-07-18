@@ -1,7 +1,5 @@
 import funkin.visuals.objects.VideoSprite;
-import funkin.visuals.shaders.RuntimeShader;
 
-var dadStrums = null;
 var timer:Float = 0;
 var videoIntro:VideoSprite = null;
 var videoMyWay:VideoSprite = null;
@@ -10,14 +8,13 @@ var blue = null;
 function onCreate() {
 	skipCountdown = true;
 
-	blue = new RuntimeShader('blue');
-	blue.data.hue.value = [1.3];
-	blue.data.pix.value = [0.00001];
+	blue = new funkin.visuals.shaders.FXShader('blue');
+	blue.set({hue: 1.3, pix: 0.00001});
 }
 
-function postCamerasInit() {
+function postCreate() {
 	videoIntro = new VideoSprite(0, 0, Paths.video("open"));
-	videoIntro.cameras = [camOther];
+	videoIntro.cameras = [camHUD2];
 	add(videoIntro);
 
 	camGame.alpha = 0;
@@ -27,7 +24,7 @@ function postCamerasInit() {
 		camGame.alpha = 1;
 		camGame.zoom = 1.125;
 		camHUD.zoom = 1.25;
-		FlxTween.tween(camHUD, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+		FlxTween.tween(camHUD2, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
 		camGame.flash(0xFF000000, 0.25);
 
 		if (videoIntro != null) {
@@ -35,21 +32,28 @@ function postCamerasInit() {
 			videoIntro = null;
 		}
 	};
-}
 
-function postCreate() {
-	dadStrums = strumLines.members[1];
+	dadStrumLine.x += 700;
+	dadStrumLine.y += 420;
+	if (ClientPrefs.data.downScroll) {
+		dadStrumLine.y -= 490;
+		dadStrumLine.downScroll = false;
+	}
 
-	dadStrums.x += 700;
-	dadStrums.y += 420;
-	for (index => strum in dadStrums.strums.members)
-		strum.x = dadStrums.x + 225 * index;
-	dadStrums.scale.set(1, 1);
-	dadStrums.alpha = 0.5;
+	for (index => strum in dadStrumLine.strums.members)
+		strum.x = dadStrumLine.x + 225 * index;
+	dadStrumLine.scale.set(1, 1);
+	dadStrumLine.alpha = 0.5;
 
-	dadStrums.camera = camGame;
+	dadStrumLine.camera = camGame;
 
 	comboGroup.visible = false;
+
+	black = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+	black.cameras = [camHUD];
+	black.scrollFactor.set(0, 0);
+	black.alpha = 0;
+	add(black);
 }
 
 function onMusicPause() {
@@ -80,7 +84,7 @@ function onNoteHit(note:Note, character:Character, rating:Dynamic, timeDistance:
 		return;
 
 	if (health > 0.1)
-        health = Math.max(0.1, health - (note.singHealth * 0.5));
+		health = Math.max(0.1, health - (note.singHealth * 0.5));
 }
 
 function myWAYYY() {
@@ -93,17 +97,15 @@ function myWAYYY() {
 	add(videoMyWay);
 
 	videoMyWay.finishCallback = function() {
-		for (cam in [camGame, camHUD])
-			cam.filters = blue;
+		camGame.setShaders([blue]);
+		camHUD.setShaders([blue]);
+		camHUD2.setShaders([blue]);
+		black.alpha = 0;
 		camGame.flash(0xFF000000, 2);
-		// lyric.visible = false;
-		// dad.visible = true;
 		camGame.zoom = 1.1;
 		FlxTween.num(0.5, 0, 2, {
 			ease: FlxEase.quadOut,
-			onUpdate: function(s:FlxTween) {
-				changeCharacter(dad, "evilLookalike");
-			}
+			onUpdate: function(s:FlxTween) {}
 		});
 
 		if (videoMyWay != null) {
@@ -125,9 +127,12 @@ function onSafeStepHit(step:Int) {
 			dad.playAnim('Bigize', true);
 		case 2065:
 			changeCharacter(dad, "evilLookalike");
-		case 3367:
+		case 3357:
 			changeCharacter(dad, "lyric");
 			dad.playAnim('story_of_yourtalebilly', true);
+		case 3487:
+			FlxTween.tween(black, {alpha: 1}, 1);
+			FlxTween.tween(camGame, {zoom: camGame.zoom + 0.6}, 1);
 		case 3494:
 			myWAYYY();
 		case 4175:

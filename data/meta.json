@@ -4,5 +4,6 @@
 	"mainMenuState": "hitsinglemenu",
 	"transition": "NullTransition",
 	"bpm": 102,
-	"title": "Friday Night Funkin' - Hit Single"
+	"title": "Friday Night Funkin' - Hit Single",
+	"icon": "appIcon"
 }

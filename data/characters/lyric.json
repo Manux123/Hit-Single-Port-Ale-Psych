@@ -7,7 +7,7 @@
         {
             "timeline": "story_of_yourtalebilly",
             "prefix": "story_of_yourtalebilly",
-            "frameRate": 24,
+            "frameRate": 12,
             "loop": false,
             "indices": [],
             "offset": {

@@ -10,24 +10,28 @@ var evilBar:FlxBar = null;
 var iconP:FlxSprite = null;
 var iconOpp:FlxSprite = null;
 var lyrics:FlxText;
-
 var playerStrums = null;
+static var camHUD2:FXCamera;
 
 function postCreate() {
 	playerStrums = strumLines.members[2];
+	playerStrums.cameras = [camHUD2];
 
 	icons.visible = false;
 }
 
-function onHudInit() {
+function postCamerasInit() {
+	camHUD2 = cameraFactory();
+	FlxG.cameras.add(camHUD2, false);
+
 	var bg = new FlxSprite(0, 0).loadGraphic(Paths.image("huds/sillybilly/bars"));
-	bg.antialiasing = true;
+	bg.antialiasing = ClientPrefs.globalAntialiasing;
 	bg.scrollFactor.set(0, 0);
-	bg.cameras = [camHUD];
+	bg.cameras = [camHUD2];
 	add(bg);
 
 	bars = new FlxSprite(0, 0).loadGraphic(Paths.image("huds/sillybilly/Bar/Silly_Healthbar"));
-	bars.antialiasing = true;
+	bars.antialiasing = ClientPrefs.globalAntialiasing;
 	bars.scale.set(0.5, 0.5);
 	bars.updateHitbox();
 	bars.screenCenter();
@@ -41,27 +45,32 @@ function postHudInit() {
 	actualBar.createGradientBar([0xFF000000, 0xFF000000], [0xFF1565C0, 0xFFFFFFFF], 1, 90);
 	actualBar.updateBar();
 	actualBar.setPosition(420, 622.8);
-	uiGroup.add(actualBar);
+	if (ClientPrefs.data.downScroll)
+		actualBar.y -= 570;
+	actualBar.cameras = [camHUD2];
+	add(actualBar);
 
 	evilBar = new FlxBar(0, 0, FlxBarFillDirection.RIGHT_TO_LEFT, 330.805, 36);
-	evilBar.cameras = [camHUD];
+	evilBar.cameras = [camHUD2];
 	evilBar.createGradientBar([0xFF000000, 0xFF000000], [0xFF8A0101, 0xFF000000], 1, 90);
 	evilBar.updateBar();
 	evilBar.setPosition(405 - evilBar.width - 25, 623.8);
-	uiGroup.add(evilBar);
+	if (ClientPrefs.data.downScroll)
+		evilBar.y -= 570;
+	add(evilBar);
 
-	bars.cameras = [camHUD];
-	uiGroup.add(bars);
+	bars.cameras = [camHUD2];
+	add(bars);
 
 	iconP = new FlxSprite().loadGraphic(Paths.image("icons/bficon"));
 	iconP.loadGraphic(Paths.image("icons/bficon"), true, Math.floor(iconP.width / 2), Math.floor(iconP.height));
 	iconP.animation.add('bf', [0, 1], 0, false, true);
 	iconP.animation.play('bf');
-	iconP.cameras = [camHUD];
+	iconP.cameras = [camHUD2];
 	iconP.setPosition(400, (bars.y + (bars.height / 2) - (iconP.height / 2)));
 	iconP.flipX = true;
 	iconP.antialiasing = ClientPrefs.globalAntialiasing;
-	uiGroup.add(iconP);
+	add(iconP);
 
 	iconOpp = new FlxSprite();
 	iconOpp.loadGraphic(Paths.image("icons/evilLookalike"));
@@ -72,10 +81,10 @@ function postHudInit() {
 	iconOpp.animation.add('3', [3], 0, false, false);
 	iconOpp.animation.add('4', [4], 0, false, false);
 	iconOpp.animation.play('1');
-	iconOpp.cameras = [camHUD];
+	iconOpp.cameras = [camHUD2];
 	iconOpp.setPosition(405 - iconOpp.width, (bars.y + (bars.height / 2) - (iconOpp.height / 2)));
 	iconOpp.antialiasing = ClientPrefs.globalAntialiasing;
-	uiGroup.add(iconOpp);
+	add(iconOpp);
 
 	iconOpp.centerOffsets();
 	iconP.centerOffsets();
@@ -83,17 +92,17 @@ function postHudInit() {
 	healthBar.visible = false;
 
 	uiGroup.remove(scoreTxt);
-	scoreTxt.cameras = [camHUD];
+	scoreTxt.cameras = [camHUD2];
 	add(scoreTxt);
 
 	lyrics = new FlxText();
-	lyrics.setFormat(Paths.font("Times New Roman.otf"), 48, 0xFFcfa92d, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, 0xFF000000);
+	lyrics.setFormat(Paths.font("Times New Roman.otf"), 42, 0xFFcfa92d, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, 0xFF000000);
 	lyrics.borderSize = 2;
 	lyrics.text = 'IM HORNY!';
-	lyrics.cameras = [camHUD];
-	lyrics.screenCenter(FlxAxes.X);
+	lyrics.cameras = [camHUD2];
 	lyrics.y = FlxG.height - lyrics.height;
 	lyrics.text = '';
+	lyrics.screenCenter(FlxAxes.X);
 	add(lyrics);
 }
 
@@ -109,6 +118,8 @@ function onUpdate(elapsed) {
 	} else {
 		iconP.animation.curAnim.curFrame = 0;
 	}
+
+	lyrics.screenCenter(FlxAxes.X);
 }
 
 function onSafeStepHit(step:Int) {
@@ -128,19 +139,34 @@ function onSafeStepHit(step:Int) {
 			FlxTween.tween(iconP, {alpha: 0}, 2);
 			FlxTween.tween(iconOpp, {alpha: 0}, 2);
 			FlxTween.tween(scoreTxt, {alpha: 0}, 2);
-			
+
 			FlxTween.tween(playerStrums, {alpha: 0}, 1);
 		case 3360:
 			FlxTween.tween(playerStrums, {x: playerStrums.x - 300}, 1);
 		case 3609:
+			changeCharacter(dad, "evilLookalike");
 			FlxTween.tween(playerStrums, {alpha: 1}, 1);
+		case 3878:
+			lyrics.text = '';
 		case 3889:
 			FlxTween.tween(playerStrums, {x: playerStrums.x + 300}, 1);
 			// finish the song
 	}
 }
 
+function postEventHit(eventName:String, value1:String, value2:String) {
+	if (eventName == 'ill make') {
+		if (value2 != null && value2 != "") {
+			lyrics.text = value2;
+		}
+	}
+}
+
 function onDestroy() {
+	if (lyrics != null) {
+		lyrics.destroy();
+		lyrics = null;
+	}
 	if (actualBar != null) {
 		actualBar.destroy();
 		actualBar = null;

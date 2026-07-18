@@ -1,4 +1,3 @@
-import flixel.util.FlxGradient;
 import flixel.FlxState;
 
 var finishCallback:Void->Void;

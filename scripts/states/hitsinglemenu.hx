@@ -110,13 +110,13 @@ function onUpdate(elapsed) {
 
 	MENUBGGRID.y -= 50 * elapsed;
 
-	if (MENUBGGRID.y > 720) {
+	if (MENUBGGRID.y > FlxG.height) {
 		MENUBGGRID.y = 0;
 	}
 
 	MENUBGTEXT.x -= 180 * elapsed;
 
-	if (MENUBGTEXT.x > 1280) {
+	if (MENUBGTEXT.x > FlxG.width) {
 		MENUBGTEXT.x = 0;
 	}
 
