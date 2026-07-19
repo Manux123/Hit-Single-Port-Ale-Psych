@@ -12,9 +12,6 @@ function onCreate() {
 }
 
 function onSongStart() {
-	if (CoolVars.meta.developerMode)
-		return;
-
 	videoIntro = new VideoSprite(0, 0, Paths.video("nmi/fakeintro"));
 	videoIntro.cameras = [camOther];
 	add(videoIntro);
