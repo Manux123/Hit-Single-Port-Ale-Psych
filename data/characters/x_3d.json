@@ -66,7 +66,7 @@
 		150,
 		110
 	],
-	"healthicon": "face",
+	"healthicon": "dad",
 	"flip_x": false,
 	"healthbar_colors": [
 		161,
@@ -75,7 +75,7 @@
 	],
 	"camera_position": [
 		-500,
-		-200
+		-210
 	],
 	"sing_duration": 6.1,
 	"scale": 1

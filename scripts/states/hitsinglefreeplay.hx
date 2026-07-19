@@ -79,6 +79,9 @@ function changeSelection(change) {
 	score.text = 'SCORE: ' + scoreyeah.score;
 	rating.text = 'RATING: ' + CoolUtil.floorDecimal(scoreyeah.accuracy, 2);
 
+	score.x = 1200 - score.width;
+    rating.x = 1200 - rating.width;
+
 	for (index => opt in menuGroup.members) {
 		var isSelected = (index == curSelected);
 		opt.alpha = isSelected ? 1 : 0.25;
@@ -126,3 +129,13 @@ function onUpdate(elapsed) {
 		CoolUtil.switchState(new CustomState(CoolVars.meta.mainMenuState));
 	}
 }
+
+CoolUtil.createTouchButtons([
+    { label: 'D', keys: ClientPrefs.controls.ui.down },
+    { label: 'U', keys: ClientPrefs.controls.ui.up },
+], 200, FlxG.height - 170);
+
+CoolUtil.createTouchButtons([
+    { label: 'A', keys: ClientPrefs.controls.ui.accept },
+    { label: 'B', keys: ClientPrefs.controls.ui.back }
+], FlxG.width - 200, FlxG.height - 170);

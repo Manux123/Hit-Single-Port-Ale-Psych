@@ -1,0 +1,100 @@
+{
+	"zoom": 0.7,
+	"speed": 1.4,
+	"hud": null,
+	"charactersOffset": {
+		"type": {
+			"opponent": {
+				"x": 770,
+				"y": 300
+			},
+			"player": {
+				"x": 950,
+				"y": 100
+			}
+		}
+	},
+	"charactersCamera": {
+		"type": {
+			"opponent": {
+				"x": 0,
+				"y": 0
+			},
+			"player": {
+				"x": 0,
+				"y": 0
+			}
+		}
+	},
+	"format": "ale-stage-v0.1",
+	"spritesConfig": {
+		"directory": "joyous",
+		"properties": {
+			"scrollFactor": {
+				"x": 1
+			}
+		},
+		"sprites": [
+            {
+				"id": "thing",
+				"type": "image",
+				"images": [
+					"SCARYSAWNIKBG"
+				],
+				"properties": {
+					"x": -200,
+					"y": -290,
+                    "visible": true,
+                    "scale": {
+                        "x": 2.1,
+                        "y": 2.1
+                    },
+					"scrollFactor": {
+						"x": 1,
+						"y": 1
+					}
+				}
+			},
+            {
+				"id": "thing2",
+				"type": "image",
+				"images": [
+                    "SCARYSAWNIKBGRED"
+				],
+				"properties": {
+					"x": -190,
+					"y": -290,
+                    "visible": false,
+                    "scale": {
+                        "x": 2.1,
+                        "y": 2.1
+                    },
+					"scrollFactor": {
+						"x": 1,
+						"y": 1
+					}
+				}
+			},
+            {
+				"id": "thing3",
+				"type": "image",
+				"images": [
+					"THEHILLFORMERLYKNOWNASGREEN"
+				],
+				"properties": {
+					"x": -185,
+					"y": -290,
+                    "visible": false,
+                    "scale": {
+                        "x": 2.1,
+                        "y": 2.1
+                    },
+					"scrollFactor": {
+						"x": 1,
+						"y": 1
+					}
+				}
+			}
+		]
+	}
+}

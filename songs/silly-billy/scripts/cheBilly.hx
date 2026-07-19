@@ -36,7 +36,7 @@ function postCreate() {
 }
 
 function onSongStart() {
-	videoIntro = new VideoSprite(0, 0, Paths.video("open"));
+	videoIntro = new VideoSprite(0, 0, Paths.video("silly/open"));
 	videoIntro.cameras = [camOther];
 	add(videoIntro);
 
@@ -91,7 +91,7 @@ function onNoteHit(note:Note, character:Character, rating:Dynamic, timeDistance:
 }
 
 function myWAYYY() {
-	videoMyWay = new VideoSprite(0, 0, Paths.video("SO_STAY_FINAL"));
+	videoMyWay = new VideoSprite(0, 0, Paths.video("silly/SO_STAY_FINAL"));
 	videoMyWay.cameras = [camOther];
 	videoMyWay.screenCenter();
 	videoMyWay.x -= 640;

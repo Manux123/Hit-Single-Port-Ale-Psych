@@ -1,0 +1,252 @@
+{
+    "zoom": 0.9,
+    "speed": 1.4,
+    "hud": null,
+    "charactersOffset": {
+        "type": {
+            "opponent": {
+                "x": 1500,
+                "y": 1000
+            },
+            "player": {
+                "x": 2735,
+                "y": 1830
+            }
+        }
+    },
+    "charactersCamera": {
+        "type": {
+            "opponent": {
+                "x": 0,
+                "y": 0
+            },
+            "player": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "format": "ale-stage-v0.1",
+    "spritesConfig": {
+        "directory": "fakebaby",
+        "properties": {
+            "scrollFactor": {
+                "x": 1
+            }
+        },
+        "sprites": [
+            {
+                "id": "idekwhatthisisfor",
+                "type": "image",
+                "images": [
+                    "fondo"
+                ],
+                "properties": {
+                    "x": 0,
+                    "y": 0,
+                    "scale": {
+                        "x": 1.6,
+                        "y": 1.6
+                    },
+                    "visible": true,
+                    "scrollFactor": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            },
+            {
+                "id": "sky",
+                "type": "image",
+                "images": [
+                    "skynsuch"
+                ],
+                "properties": {
+                    "x": 0,
+                    "y": 0,
+                    "scale": {
+                        "x": 1.6,
+                        "y": 1.6
+                    },
+                    "visible": true,
+                    "scrollFactor": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            },
+            {
+                "id": "trees",
+                "type": "image",
+                "images": [
+                    "letrees"
+                ],
+                "properties": {
+                    "x": 0,
+                    "y": 0,
+                    "scale": {
+                        "x": 1.6,
+                        "y": 1.6
+                    },
+                    "visible": true,
+                    "scrollFactor": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            },
+            {
+                "id": "fog",
+                "type": "image",
+                "images": [
+                    "mustardgas"
+                ],
+                "properties": {
+                    "x": 0,
+                    "y": 0,
+                    "scale": {
+                        "x": 1.6,
+                        "y": 1.6
+                    },
+                    "visible": true,
+                    "scrollFactor": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            },
+            {
+                "id": "fog2",
+                "type": "image",
+                "images": [
+                    "mustardgas2"
+                ],
+                "properties": {
+                    "x": 0,
+                    "y": 0,
+                    "scale": {
+                        "x": 1.6,
+                        "y": 1.6
+                    },
+                    "visible": true,
+                    "scrollFactor": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            },
+            {
+                "id": "water",
+                "type": "image",
+                "images": [
+                    "agua"
+                ],
+                "properties": {
+                    "x": 0,
+                    "y": 0,
+                    "scale": {
+                        "x": 1.6,
+                        "y": 1.6
+                    },
+                    "visible": true,
+                    "scrollFactor": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            },
+            {
+                "id": "arena",
+                "type": "image",
+                "images": [
+                    "arena"
+                ],
+                "properties": {
+                    "x": 0,
+                    "y": 0,
+                    "scale": {
+                        "x": 1.6,
+                        "y": 1.6
+                    },
+                    "visible": true,
+                    "scrollFactor": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            },
+            {
+                "id": "frontTrees",
+                "type": "image",
+                "images": [
+                    "lefrontree"
+                ],
+                "properties": {
+                    "x": 0,
+                    "y": 0,
+                    "scale": {
+                        "x": 1.6,
+                        "y": 1.6
+                    },
+                    "visible": true,
+                    "scrollFactor": {
+                        "x": 0.6,
+                        "y": 0.6
+                    }
+                }
+            },
+            {
+                "id": "waterSplash",
+                "type": "sheet",
+                "images": [
+                    "waterbaby"
+                ],
+                "animations": [
+                    {
+                        "name": "i",
+                        "prefix": "water instancia 1",
+                        "frameRate": 24,
+                        "loop": false,
+                        "indices": [],
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                ],
+                "properties": {
+                    "x": 2705,
+                    "y": 2550,
+                    "scale": {
+                        "x": 1.1,
+                        "y": 1.1
+                    },
+                    "visible": true,
+                    "scrollFactor": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                "bopAnimations": [
+                    "i"
+                ]
+            },
+            {
+                "id": "realland",
+                "type": "image",
+                "images": [
+                    "realbaby"
+                ],
+                "properties": {
+                    "x": 710,
+                    "y": 700,
+                    "visible": false,
+                    "scrollFactor": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            }
+        ]
+    }
+}
