@@ -60,7 +60,7 @@
             }
         }
     ],
-    "animationLength": 4,
+    "animationLength": 0.8,
     "icon": "dad",
     "cameraOffset": {
         "x": -830,
