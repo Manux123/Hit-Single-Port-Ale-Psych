@@ -264,7 +264,7 @@
 				]
 			]
 		],
-		"gfVersion": "dunklegf",
+		"gfVersion": "gf",
 		"player2": "x",
 		"notes": [
 			{
@@ -4459,7 +4459,7 @@
 				"mustHitSection": true
 			}
 		],
-		"player3": "pico",
+		"player3": "gf",
 		"keys": 4,
 		"song": "Trichael",
 		"validScore": true,

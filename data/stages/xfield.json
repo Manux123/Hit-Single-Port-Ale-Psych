@@ -1,0 +1,56 @@
+{
+	"zoom": 0.9,
+	"speed": 1.4,
+	"hud": null,
+	"charactersOffset": {
+		"type": {
+			"opponent": {
+				"x": 270,
+				"y": 550
+			},
+			"player": {
+				"x": 900,
+				"y": 100
+			}
+		}
+	},
+	"charactersCamera": {
+		"type": {
+			"opponent": {
+				"x": 0,
+				"y": 0
+			},
+			"player": {
+				"x": 0,
+				"y": 0
+			}
+		}
+	},
+	"format": "ale-stage-v0.1",
+	"spritesConfig": {
+		"directory": "trichael",
+		"properties": {
+			"scrollFactor": {
+				"x": 1
+			}
+		},
+		"sprites": [
+            {
+				"id": "field",
+				"type": "image",
+				"images": [
+					"field"
+				],
+				"properties": {
+					"x": -600,
+					"y": -400,
+                    "visible": true,
+					"scrollFactor": {
+						"x": 1,
+						"y": 1
+					}
+				}
+			}
+		]
+	}
+}

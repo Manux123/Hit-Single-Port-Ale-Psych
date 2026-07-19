@@ -1,6 +1,9 @@
 import flixel.group.FlxTypedSpriteGroup;
 import flixel.addons.display.FlxBackdrop;
+import funkin.config.Score;
 import flixel.util.FlxAxes;
+
+using StringTools;
 
 var menuBGMain:FlxSprite;
 var shape:FlxSprite;
@@ -70,6 +73,11 @@ var curSelected:Int = 0;
 
 function changeSelection(change) {
 	curSelected = FlxMath.wrap(curSelected + change, 0, menuGroup.members.length - 1);
+
+	final scoreyeah:SongScore = Score.getSong(options[curSelected], 'normal');
+
+	score.text = 'SCORE: ' + scoreyeah.score;
+	rating.text = 'RATING: ' + CoolUtil.floorDecimal(scoreyeah.accuracy, 2);
 
 	for (index => opt in menuGroup.members) {
 		var isSelected = (index == curSelected);
