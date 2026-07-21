@@ -119,4 +119,3 @@ function onEventHit(eventName, value1, value2) {
 			}
 	}
 }
-startTime = Conductor.stepToTime(2700);

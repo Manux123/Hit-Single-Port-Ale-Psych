@@ -154,7 +154,7 @@ function onSafeStepHit(step:Float) {
 			changeCharacter(dad, "tv_nmi");
 			changeCharacter(boyfriend, "ddoom");
 
-			FlxTween.tween(dadStrumLine, {alpha: dadStrumLine.alpha - 0.8, x: dadStrumLine.x + 350}, 1, {ease: FlxEase.quadOut});
+			FlxTween.tween(dadStrumLine, {alpha: dadStrumLine.alpha - 0.7, x: dadStrumLine.x + 350}, 1, {ease: FlxEase.quadOut});
 
 			FlxTween.tween(bfStrumLine, {x: bfStrumLine.x - 300}, 1, {ease: FlxEase.quadOut});
 		case 2115:
@@ -212,6 +212,8 @@ function onSafeStepHit(step:Float) {
 			FlxTween.tween(bfStrumLine, {x: defaultBFX + 300}, 1, {ease: FlxEase.quadOut});
 			FlxTween.tween(dadStrumLine, {x: defaultDadX - 350}, 1, {ease: FlxEase.quadOut});
 		case 2625:
+			if (!botplay)
+				botplay = true;
 			camGame.visible = false;
 			camHUD.visible = false;
 			finishCutscene();
@@ -234,4 +236,6 @@ function onDestroy() {
 		videoFinish.destroy();
 		videoFinish = null;
 	}
+
+	botplay = ClientPrefs.data.botplay;
 }

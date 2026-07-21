@@ -256,10 +256,11 @@ class ModchartManager extends scripting.haxe.ScriptedFlxBasic {
 			if (!preparedMods.exists(tag))
 				return;
 			final mod = preparedMods.get(tag).instance;
-			for (field in Reflect.fields(props))
+			for (field in Reflect.fields(props)) {
 				if (!mod.hasSubValue(field))
 					continue;
-			activeTweens.push(new ModifierTween(mod, field, mod.getSubValue(field), Reflect.field(props, field), duration, beat, easeFunc));
+				activeTweens.push(new ModifierTween(mod, field, mod.getSubValue(field), Reflect.field(props, field), duration, beat, easeFunc));
+			}
 			log('Added ease for sub value for [' + Reflect.fields(props).join(", ") + '] at beat $beat.');
 		});
 	}
