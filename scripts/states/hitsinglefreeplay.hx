@@ -19,7 +19,8 @@ function onCreate() {
 	if (Conductor.music == null)
 		Conductor.play(Paths.music('freakyMenu'), 102, 4, 4);
 
-	CoolVars.meta.transition = 'FadeTransition';
+	CoolVars.meta.substates.FadeTransition = "FadeTransition";
+
 	menuBGMain = addTitleSprite('MENUBGMAIN', 0, 0, 0, 1);
 
 	shape = addTitleSprite('MENUBGSHAPES', 0, 0, 0, 1);
@@ -80,7 +81,7 @@ function changeSelection(change) {
 	rating.text = 'RATING: ' + CoolUtil.floorDecimal(scoreyeah.accuracy, 2);
 
 	score.x = 1200 - score.width;
-    rating.x = 1200 - rating.width;
+	rating.x = 1200 - rating.width;
 
 	for (index => opt in menuGroup.members) {
 		var isSelected = (index == curSelected);
@@ -124,18 +125,16 @@ function onUpdate(elapsed) {
 		selectMenu();
 
 	if (Controls.BACK) {
-		CoolVars.meta.transition = 'NullTransition';
+		CoolVars.meta.substates.FadeTransition = "NullTransition";
 
-		CoolUtil.switchState(new CustomState(CoolVars.meta.mainMenuState));
+		CoolUtil.switchState(new CustomState('MainMenuState'));
 	}
 }
-
 CoolUtil.createTouchButtons([
-    { label: 'D', keys: ClientPrefs.controls.ui.down },
-    { label: 'U', keys: ClientPrefs.controls.ui.up },
+	{label: 'D', keys: ClientPrefs.controls.ui.down},
+	{label: 'U', keys: ClientPrefs.controls.ui.up},
 ], 200, FlxG.height - 170);
-
 CoolUtil.createTouchButtons([
-    { label: 'A', keys: ClientPrefs.controls.ui.accept },
-    { label: 'B', keys: ClientPrefs.controls.ui.back }
+	{label: 'A', keys: ClientPrefs.controls.ui.accept},
+	{label: 'B', keys: ClientPrefs.controls.ui.back}
 ], FlxG.width - 200, FlxG.height - 170);

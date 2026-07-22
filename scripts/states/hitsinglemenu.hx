@@ -90,11 +90,11 @@ function selectMenu() {
 		case 'MENUSTORY':
 			CoolUtil.switchState(new PlayState('freeplay', ['silly-billy'], 'normal'));
 		case 'MENUFREEPLAY':
-			CoolUtil.switchState(new CustomState(CoolVars.meta.freeplayState));
+			CoolUtil.switchState(new CustomState('FreeplayState'));
 		case 'MENUCREDITS':
-			CoolUtil.switchState(new CustomState(CoolVars.meta.creditsState));
+			CoolUtil.switchState(new CustomState('CreditsState'));
 		case 'MENUOPTIONS':
-			CoolUtil.switchState(new CustomState(CoolVars.meta.optionsState));
+			CoolUtil.switchState(new CustomState('OptionsState'));
 	}
 }
 
@@ -124,7 +124,7 @@ function onUpdate(elapsed) {
 		selectMenu();
 
 	if (Controls.BACK)
-		CoolUtil.switchState(new CustomState(CoolVars.meta.titleState));
+		CoolUtil.switchState(new CustomState('TitleState'));
 }
 
 CoolUtil.createTouchButtons([

@@ -53,7 +53,7 @@ function selectMenu() {
 		FlxTween.tween(logo, {alpha: 0}, 0.8);
 
 		new FlxTimer().start(1, function(_) {
-			CoolUtil.switchState(new CustomState(CoolVars.meta.mainMenuState));
+			CoolUtil.switchState(new CustomState('MainMenuState'));
 		});
 	});
 }

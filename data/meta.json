@@ -1,9 +1,14 @@
 {
 	"developerMode": true,
-	"titleState": "hitsingletitle",
-	"mainMenuState": "hitsinglemenu",
-	"freeplayState": "hitsinglefreeplay",
-	"transition": "NullTransition",
+	"states": {
+		"TitleState": "hitsingletitle",
+		"MainMenuState": "hitsinglemenu",
+		"FreeplayState": "hitsinglefreeplay"
+	},
+	"substates": {
+		"FadeTransition": "NullTransition"
+	},
+	"icon": "images/appIcon",
 	"bpm": 102,
 	"title": "Friday Night Funkin' - Hit Single"
 }
